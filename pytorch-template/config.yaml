@@ -1,0 +1,49 @@
+pwd: /data/ephemeral/home/pytorch-template
+
+name: STS
+
+arch:
+  type: STSModel
+  args:
+    plm_name: snunlp/KR-ELECTRA-discriminator
+
+data_module:
+  type: DataModule
+  args:
+    plm_name: ${arch.args.plm_name}
+    dataset_name: STSDataset
+    batch_size: 16
+    shuffle: true
+    train_path: ${pwd}/data/train.csv
+    dev_path: ${pwd}/data/dev.csv
+    test_path: ${pwd}/data/dev.csv
+    predict_path: ${pwd}/data/test.csv
+    max_length: 160
+    col_info:
+      label: label
+      input: [sentence_1, sentence_2]
+
+optimizer:
+  type: Adam
+  args:
+    lr: 0.00002
+    weight_decay: 0
+    amsgrad: true
+
+loss: l2_loss
+metrics: [pearson]
+
+lr_scheduler:
+  type: StepLR
+  args:
+    step_size: 50
+    gamma: 0.1
+
+trainer:
+  epochs: 15
+  save_dir: ${pwd}/saved/
+  mode: max
+
+wandb:
+  enable: false
+  project_name: backbone_model
