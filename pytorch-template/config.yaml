@@ -12,19 +12,19 @@ data_module:
   args:
     plm_name: ${arch.args.plm_name}
     dataset_name: STSDataset
-    batch_size: 4
+    batch_size: 16
     shuffle: true
     train_path: ${pwd}/data/augmented_raw_train_data.csv
     dev_path: ${pwd}/data/dev.csv
     test_path: ${pwd}/data/dev.csv
     predict_path: ${pwd}/data/test.csv
-    max_length: 160
+    max_length: 190
     col_info:
       label: label
       input: [sentence_1, sentence_2]
 
 optimizer:
-  type: Adam
+  type: AdamW
   args:
     lr: 0.00001
     weight_decay: 0
