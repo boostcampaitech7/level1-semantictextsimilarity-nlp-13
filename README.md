@@ -8,12 +8,12 @@
 
 ## Project Leader Board 
 - Public Leader Board
-<img width="1089" alt="public_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
+<img width="1089" alt="public_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
 
 - Private Leader Board 
-<img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
+<img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
 
-- [📈 NLP 11조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
+- [📈 NLP 13조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
 
 <br>
 
@@ -37,7 +37,7 @@
 | **`김성은`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (Encoder, Decoder, Encoder - Decoder 모델로 세분화하여 탐색), **모델 실험** (snunlp-KR-ELECTRA), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김태원`** | **모델 실험** (KR-ELECTRA-discriminator, electra-kor-base, deberta-v3, klue-roberta ), **데이터 증강** (label rescaling(0점 인덱스의 제거 및 5점 인덱스 추가), 단순 복제 데이터 증강(1점~3점 인덱스), train 데이터의 전체적인 맞춤법 교정/불용어 제거/띄어쓰기 교정), **모델 Ensemble** (weighted sum for 3model/4models) |
 | **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), Hyperparameter Tuning(Optuna Template 제작 및 실험)|
-| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정 및 Ensemble** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
+| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
 
 <br>
 
@@ -48,7 +48,7 @@
 | :---: | --- |
 |**프로젝트 구현내용**| 1. Hugging Face의 Pretrained 모델과 STS 데이터셋을 활용해 두 문장의 0과 5사이의 유사도를 측정하는 AI 모델을 구축 <br>2. 리더보드 평가지표인 피어슨 상관 계수(Pearson Correlation Coefficient, PCC)에서 높은 점수(1에 가까운 점수)에 도달할 수 있도록 데이터 전처리, 증강, 하이퍼파라미터 튜닝을 진행|
 |**개발 환경**|**• `GPU` :** Tesla V100 서버 4개 (RAM32G)<br> **• `개발 Tool` :** Jupyter notebook, VS Code [서버 SSH연결]
-|**협업 환경**|**• `Github Repository` :** Baseline 코드 공유 및 버전 관리, 개인 branch 를 사용하여 작업 <br>**• `Notion` :** STS 프로젝트 페이지를 통한 역할분담, 실험 가설 설정 및 결과 공유 <br>**• `SLACK, Zoom` :** 실시간 비대면 회의|
+|**협업 환경**&nbsp;&nbsp;&nbsp;|**• `Github Repository` :** Baseline 코드 공유 및 버전 관리, 개인 branch 를 사용하여 작업 <br>**• `Notion` :** STS 프로젝트 페이지를 통한 역할분담, 실험 가설 설정 및 결과 공유 <br>**• `SLACK, Zoom` :** 실시간 비대면 회의|
 
 <br>
 
