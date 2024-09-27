@@ -1,10 +1,10 @@
-pwd: /data/ephemeral/home/tw/vanila
+pwd: pwd
 name: STS
 
 arch:
   type: STSModel
   args:
-    plm_name: klue/roberta-base
+    plm_name: [klue/roberta-base, kykim/electra-kor-base , team-lucid/deberta-v3-base-korean , snunlp/KR-ELECTRA-discriminator, eenzeenee/t5-base-korean-summarization]
 
 data_module:
   type: DataModule
@@ -13,7 +13,7 @@ data_module:
     dataset_name: STSDataset
     batch_size: 16
     shuffle: true
-    train_path: ${pwd}/data/aug_aug_aug_train.csv
+    train_path: ${pwd}/data/aug_train.csv
     dev_path: ${pwd}/data/dev.csv
     test_path: ${pwd}/data/dev.csv
     predict_path: ${pwd}/data/test.csv
@@ -25,7 +25,7 @@ data_module:
 optimizer:
   type: AdamW
   args:
-    lr: 0.00001
+    lr: [1e-5, 1e-5, 1e-4, 1e-5, 1e-5]
     weight_decay: 0
     amsgrad: true
 
