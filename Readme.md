@@ -11,9 +11,9 @@
 <img width="1089" alt="public_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
 
 - Private Leader Board 
-<img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
+<img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
 
-- [📈 NLP 11조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
+- [📈 NLP 13조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
 
 <br>
 
@@ -37,7 +37,7 @@
 | **`김성은`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (Encoder, Decoder, Encoder - Decoder 모델로 세분화하여 탐색), **모델 실험** (snunlp-KR-ELECTRA), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김태원`** | **모델 실험** (KR-ELECTRA-discriminator, electra-kor-base, deberta-v3, klue-roberta ), **데이터 증강** (label rescaling(0점 인덱스의 제거 및 5점 인덱스 추가), 단순 복제 데이터 증강(1점~3점 인덱스), train 데이터의 전체적인 맞춤법 교정/불용어 제거/띄어쓰기 교정), **모델 Ensemble** (weighted sum for 3model/4models) |
 | **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), Hyperparameter Tuning(Optuna Template 제작 및 실험)|
-| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정 및 Ensemble** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
+| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
 
 <br>
 
@@ -64,7 +64,7 @@
 
 > 학습 진행하기 전 데이터 증강을 먼저 실행하여 학습 시간 단축
 
-- **데이터 증강** Get Augmentation Data : `augmentation.py`
+- **데이터 증강 Get Augmentation Data** : `augmentation.py`
 - **Train** : `train.py`
 - **Predict** : `test.py`
 - **Ensemble** : `weighted_ensemble.py`, `blending_ensemble.py`
@@ -110,13 +110,13 @@
 <br>
 
 ## 📐 Project Ground Rule
->팀 협업을 위해 프로젝트 관련 Ground Rule을 설정하여 프로젝트가 원활하게 돌아갈 수 있도록 팀 규칙을 정했으며, 날짜 단위로 간략한 목표를 설정하여 협업을 원활하게 진행할 수 있도록 계획을 하여 진행했습니다.
+>팀 협업을 위해 프로젝트 관련 Ground Rule을 설정하여 프로젝트가 원활하게 돌아갈 수 있도록 규칙을 정했으며, 날짜 단위로 간략한 목표를 설정하여 협업을 원활하게 진행할 수 있도록 계획하여 진행했습니다.
 
 **- a. `Server 관련`** : 권지수, 김성은, 이한서, 정주현 캠퍼는 각자 서버를 생성해 모델 실험을 진행하고, 팀장 김태원은 서버가 유휴 상태일 때 실험을 이어서 관리하며 진행한다.
 
-**- b. `Git 관련`** : 각자 branch 생성해 작업하고, 공통으로 사용할 파일은 main에 push 하는 방법으로 협업 진행한다.
+**- b. `Git 관련`** : 각자 branch 생성해 작업하고, 공통으로 사용할 파일은 main에 push 하는 방법으로 협업을 진행한다.
 
-**- c. `Submission 관련`** : 대회 마감 2일 전까지는 자유롭게 제출을 하나, 2일 전부터는 인당 2회씩 분배한다.
+**- c. `Submission 관련`** : 대회 마감 2일 전까지는 자유롭게 제출하나, 2일 전부터는 인당 2회씩 분배한다.
 
 **- d. `Notion 관련`** : 원활한 아이디어 브레인스토밍과 분업을 위해 회의를 할 경우 노션에 기록하며, 연구 및 실험결과의 기록을 공유했다.
 
@@ -130,8 +130,7 @@
 - **`(11~13 일차)`** : 앙상블
 
 *아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
-
-![road_map]<img width="486" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
+<img width="486" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
 
 <br>
 
@@ -152,7 +151,7 @@
 * 최종적으로 5개의 모델을 blending 기법을 활용하여 사용하였습니다.
 
 |**Model**|**Learing Rate**|**Batch Size**|**loss**|**epoch**|**dev person (val_pearson)**|**Scheduler**|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |**klue/roberta-base**|1e-5|16|L2(MSE)|10|0.9216|stepLR|
 |**kykim/electra-kor-base**|1e-5|16|L2(MSE)|10|0.9259|stepLR|
 |**team-lucid/deberta-v3-base-korean**|1e-4|16|L2(MSE)|10|0.9327|stepLR|
