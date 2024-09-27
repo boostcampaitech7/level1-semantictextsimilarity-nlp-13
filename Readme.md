@@ -6,11 +6,11 @@
 
 <br>
 
-## 🎖️Project Leader Board 
-- 🥇 Public Leader Board
+## Project Leader Board 
+- Public Leader Board
 <img width="1089" alt="public_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
 
-- 🥈Private Leader Board 
+- Private Leader Board 
 <img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
 
 - [📈 NLP 11조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
@@ -36,8 +36,8 @@
 | **`권지수`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (KLUE: 논문 바탕으로 RoBERTa와 ELECTRA 계열 모델 중심으로 탐색), **모델 실험** (team-lucid/deberta-v3-base-korean), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김성은`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (Encoder, Decoder, Encoder - Decoder 모델로 세분화하여 탐색), **모델 실험** (snunlp-KR-ELECTRA), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김태원`** | **모델 실험** (KR-ELECTRA-discriminator, electra-kor-base, deberta-v3, klue-roberta ), **데이터 증강** (label rescaling(0점 인덱스의 제거 및 5점 인덱스 추가), 단순 복제 데이터 증강(1점~3점 인덱스), train 데이터의 전체적인 맞춤법 교정/불용어 제거/띄어쓰기 교정), **모델 Ensemble** (weighted sum for 3model/4models) |
-| **`이한서`** |  |
-| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정 및 Ensemble** (T5-base-korean-summarization), Ensemble(Blending Ensemble for 3 or 4 model(meta model = Ridge) |
+| **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), Hyperparameter Tuning(Optuna Template 제작 및 실험)|
+| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정 및 Ensemble** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
 
 <br>
 
@@ -46,22 +46,19 @@
 
 |**프로젝트 주제**| **`Semantic Text Similarity (STS)` :** 두 텍스트가 얼마나 유사한지 판단하는 NLP Task|
 | :---: | --- |
-|**프로젝트 구현내용**| 1. Hugging Face의 Pretrained 모델과STS 데이터셋을 활용해 두 문장의 0과 5사이의 유사도를 측정하는 AI모델을 구축 <br>2. 리더보드 평가지표인 피어슨 상관 계수(Pearson Correlation Coefficient ,PCC)에서 높은 점수(1에 가까운 점수)에 도달할 수 있도록 데이터 전처리, 증강, 하이퍼 파라미터 튜닝을 진행|
+|**프로젝트 구현내용**| 1. Hugging Face의 Pretrained 모델과 STS 데이터셋을 활용해 두 문장의 0과 5사이의 유사도를 측정하는 AI 모델을 구축 <br>2. 리더보드 평가지표인 피어슨 상관 계수(Pearson Correlation Coefficient, PCC)에서 높은 점수(1에 가까운 점수)에 도달할 수 있도록 데이터 전처리, 증강, 하이퍼파라미터 튜닝을 진행|
 |**개발 환경**|**• `GPU` :** Tesla V100 서버 4개 (RAM32G)<br> **• `개발 Tool` :** Jupyter notebook, VS Code [서버 SSH연결]
 |**협업 환경**|**• `Github Repository` :** Baseline 코드 공유 및 버전 관리, 개인 branch 를 사용하여 작업 <br>**• `Notion` :** STS 프로젝트 페이지를 통한 역할분담, 실험 가설 설정 및 결과 공유 <br>**• `SLACK, Zoom` :** 실시간 비대면 회의|
+
+<br>
 
 ## 📁 Project Structure
 
 ### 🗂️ 디렉토리 구조 설명
 - 학습 데이터 경로: `./data`
-- 공개 Pretrained 모델 기반으로 추가 Fine Tuning 학습을 한 파라미터 경로
-    - `./save_folder/kykim/checkpoint-7960`
-    - `./save_folder/snunlp/checkpoint-31824`
-    - `./save_folder/xlm_roberta_large/checkpoint-7960`
-- 학습 메인 코드: `./train.py`
+- 학습 메인 코드: `./train.py`
 - 학습 데이터셋 경로: `./data/aug_train.csv`
-- 테스트 메인 코드: `./infer.py`
-- 테스트 데이터셋 경로: `./data/test.csv`
+- 테스트 데이터셋 경로: `./data/test.csv`
 
 ### 📄 코드 구조 설명
 
@@ -69,9 +66,9 @@
 
 - **데이터 증강** Get Augmentation Data : `augmentation.py`
 - **Train** : `train.py`
-- **Predict** : `infer.py`
-- **Ensemble** : `python esnb.py`
-- **최종 제출 파일** : `./esnb/esnb.csv`
+- **Predict** : `test.py`
+- **Ensemble** : `weighted_ensemble.py`, `blending_ensemble.py`
+- **최종 제출 파일** : `/output/Ensemble/blending_ensemble.csv`
 
 ```
 📦level1_semantictextsimilarity-nlp-11
@@ -141,6 +138,8 @@
 ### **📊DataSet**
 * 우리는 먼저 데이터의 양이 적고 불균형하다는 점을 확인했다. 이를 해결하기 위해 데이터의 양을 절대적으로 늘린 후, 증강된 데이터의 라벨 분포를 고려하여 추가적인 데이터 증강을 진행했다.
 
+|**Techniques**|**Description**|
+|:--:|:--:|
 |`**Swap sentence**`|전체 데이터를 sentence1과 sentence2의 순서를 바꾸어 데이터의 양을 약 2배로 증강했다.|
 |`**유의어 교체를 통한 증강**`|raw 데이터셋에서 sentence 1과 sentence 2에 '너무', '정말', '진짜'라는 단어가 많이 들어가 있다는 것을 판단하여 해당 단어들이 포함된 문장에서 그 중 한 단어를 제외한 나머지 두 단어 중 하나로 무작위 대체하여 데이터를 증강했다.|
 
@@ -152,13 +151,13 @@
 
 * 최종적으로 5개의 모델을 blending 기법을 활용하여 사용하였습니다.
 
-|**Model**|**Learing Rate**|**Batch Size**|**loss**|**epoch**|**Data Augmentation**|**dev person (val_pearson)**|**Scheduler**|
+|**Model**|**Learing Rate**|**Batch Size**|**loss**|**epoch**|**dev person (val_pearson)**|**Scheduler**|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|**klue/roberta-base**|1e-5|16|L2(MSE)|10|AugmentationV2|0.9216|stepLR|
-|**kykim/electra-kor-base**|1e-5|16|L2(MSE)|10|AugmentationV3|0.9259|stepLR|
-|**team-lucid/deberta-v3-base-korean**|1e-4|16|L2(MSE)|10|AugmentationV2|0.9327|stepLR|
-|**snunlp/KR-ELECTRA-discriminator**|1e-5|16|L2(MSE)|10||AugmentationV1|0.9333|stepLR|
-|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|AugmentationV2|stepLR|
+|**klue/roberta-base**|1e-5|16|L2(MSE)|10|0.9216|stepLR|
+|**kykim/electra-kor-base**|1e-5|16|L2(MSE)|10|0.9259|stepLR|
+|**team-lucid/deberta-v3-base-korean**|1e-4|16|L2(MSE)|10|0.9327|stepLR|
+|**snunlp/KR-ELECTRA-discriminator**|1e-5|16|L2(MSE)|10|0.9333|stepLR|
+|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|stepLR|
 
 <br>
 
@@ -203,7 +202,8 @@ python3 test.py
 ### ⌨️ How To Ensemble
 ```bash
 # 순차적으로 weighted ensemble 진행 후, 출력 결과를 사용해서 blended ensemble 진행
-python3 weighted_ensemble # klue/roberta-base, eenzeenee/t5-base-korean-summarization, kykim/electra-kor-base
-python3 blended_ensemble # kykim/electra-kor-base , team-lucid/deberta-v3-base-korean , snunlp/KR-ELECTRA-discriminator, weighted_ensemble
+python3 weighted_ensemble.py # klue/roberta-base, eenzeenee/t5-base-korean-summarization, kykim/electra-kor-base
+python3 blending_ensemble.py # kykim/electra-kor-base , team-lucid/deberta-v3-base-korean , snunlp/KR-ELECTRA-discriminator, weighted_ensemble
 ```
+
 
