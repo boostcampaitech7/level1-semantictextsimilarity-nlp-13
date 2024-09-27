@@ -17,7 +17,7 @@ weights = [0.4, 0.27, 0.33]  # 예시: 각 모델의 가중치
 dev_ensemble_result = weighted_ensemble([output_1, output_2, output_3], weights)
 
 # 결과를 output.csv로 저장
-dev_ensemble_result.to_csv('output/eng2/dev_output_eng2.csv')
+dev_ensemble_result.to_csv('output/eng2_/dev_output_eng2.csv')
 
 # # 파일 불러오기
 output_1 = pd.read_csv('output/STSModel_kykim-electra-kor-base_val_pearson=0.9258827567100525/test_output_kykim.csv')
@@ -28,4 +28,4 @@ output_3 = pd.read_csv('output/STSModel_eenzeenee-t5-base-korean-summarization_v
 weights = [0.4, 0.27, 0.33]  # 예시: 각 모델의 가중치
 test_ensemble_result = weighted_ensemble([output_1, output_2, output_3], weights)
 
-test_ensemble_result.to_csv('output/Ensemble/weighted_ensemble.csv', index=False)
+test_ensemble_result.to_csv('output/eng2_/test_output_eng2.csv', index=False)
