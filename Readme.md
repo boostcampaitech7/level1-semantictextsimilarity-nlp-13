@@ -131,7 +131,7 @@
 
 *아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
 
-![road_map](https://github.com/boostcampaitech7/level1-semantictextsimilarity-nlp-13/issues/4#issue-2553109719)
+![road_map]<img width="486" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
 
 <br>
 
@@ -205,5 +205,6 @@ python3 test.py
 python3 weighted_ensemble.py # klue/roberta-base, eenzeenee/t5-base-korean-summarization, kykim/electra-kor-base
 python3 blending_ensemble.py # kykim/electra-kor-base , team-lucid/deberta-v3-base-korean , snunlp/KR-ELECTRA-discriminator, weighted_ensemble
 ```
+
 
 
