@@ -71,39 +71,56 @@
 - **최종 제출 파일** : `/output/Ensemble/blending_ensemble.csv`
 
 ```
-📦level1_semantictextsimilarity-nlp-11
- ┣ .gitignore
- ┣ config_yaml
- ┃ ┣ kykim.yaml
- ┃ ┣ snunlp.yaml
- ┃ ┣ test.yaml
- ┃ ┗ xlm_roberta_large.yaml
- ┣ data
- ┃ ┣ train.csv
+📦level1_semantictextsimilarity-nlp-13
+ ┣ 📂 base
+ ┃ ┣ __init__.py
+ ┃ ┣ base_data_loader.py
+ ┃ ┣ base_dataset.py
+ ┃ ┗ base_trainer.py
+ ┣ 📂 data
  ┃ ┣ aug_train.csv
  ┃ ┣ dev.csv
- ┃ ┗ test.csv
- ┣ wordnet
- ┃ ┗ wordnet.pickle
- ┣ save_folde
- ┃ ┣ kykim
- ┃ ┃ ┗ checkpoint-7960
- ┃ ┣ snunlp
- ┃ ┃ ┗ checkpoint-31824
- ┃ ┗ xlm_roberta_large
- ┃   ┗ checkpoint-7960
- ┣ esnb
- ┃ ┗ esnb.csv
- ┣ output
- ┃ ┣ xlm_roberta_large.csv
- ┃ ┣ kykim.csv
- ┃ ┗ snunlp.csv
- ┣ .gitignore
- ┣ Readme.md
+ ┃ ┣ sample_submission.csv
+ ┃ ┣ test.csv
+ ┃ ┗ train.csv
+ ┣ 📂 module
+ ┃ ┣ dataset.py
+ ┃ ┣ loss.py
+ ┃ ┣ metric.py
+ ┃ ┣ model.py
+ ┃ ┗ trainer.py
+ ┣ 📂 output
+ ┃ ┣ 📂 Ensemble
+ ┃ ┃ ┗ blending_ensemble.csv
+ ┃ ┣ 📂 STSModel_eenzeenee-t5-base-korean-summarization
+ ┃ ┃ ┣ dev_output_t5.csv
+ ┃ ┃ ┣ test_output_t5.csv
+ ┃ ┃ ┗ train_output_t5.csv
+ ┃ ┣ 📂 STSModel_klue-roberta-base
+ ┃ ┃ ┣ dev_output_klue.csv
+ ┃ ┃ ┣ test_output_klue.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_kykim-electra-kor-base
+ ┃ ┃ ┣ dev_output_kykim.csv
+ ┃ ┃ ┣ test_output_kykim.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_snunlp-KR-ELECTRA-discriminator
+ ┃ ┃ ┣ dev_output_snunlp.csv
+ ┃ ┃ ┣ test_output_snunlp.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_team-lucid-deberta-v3-base-korean
+ ┃ ┃ ┣ dev_output_lucid.csv
+ ┃ ┃ ┣ test_output_lucid.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┗ 📂 eng2_
+ ┃ ┃ ┣ dev_output_eng2.csv
+ ┃ ┃ ┗ test_output_eng2.csv
  ┣ augmentation.py
- ┣ dataloader.py
- ┣ esnb.py
- ┣ infer.py
+ ┣ blending_ensemble.py
+ ┣ config.yaml
+ ┣ Readme.md
+ ┣ requirements.txt
+ ┣ test.py
  ┣ train.py
  ┗ utils.py
  ```
@@ -139,8 +156,8 @@
 
 |**Techniques**|**Description**|
 |:--:|:--:|
-|`**Swap sentence**`|전체 데이터를 sentence1과 sentence2의 순서를 바꾸어 데이터의 양을 약 2배로 증강했다.|
-|`**유의어 교체를 통한 증강**`|raw 데이터셋에서 sentence 1과 sentence 2에 '너무', '정말', '진짜'라는 단어가 많이 들어가 있다는 것을 판단하여 해당 단어들이 포함된 문장에서 그 중 한 단어를 제외한 나머지 두 단어 중 하나로 무작위 대체하여 데이터를 증강했다.|
+|**`Swap sentence`**|전체 데이터를 sentence1과 sentence2의 순서를 바꾸어 데이터의 양을 약 2배로 증강했다.|
+|**`유의어 교체를 통한 증강`**|raw 데이터셋에서 sentence 1과 sentence 2에 '너무', '정말', '진짜'라는 단어가 많이 들어가 있다는 것을 판단하여 해당 단어들이 포함된 문장에서 그 중 한 단어를 제외한 나머지 두 단어 중 하나로 무작위 대체하여 데이터를 증강했다.|
 
 <br>
 
@@ -156,7 +173,7 @@
 |**kykim/electra-kor-base**|1e-5|16|L2(MSE)|10|0.9259|stepLR|
 |**team-lucid/deberta-v3-base-korean**|1e-4|16|L2(MSE)|10|0.9327|stepLR|
 |**snunlp/KR-ELECTRA-discriminator**|1e-5|16|L2(MSE)|10|0.9333|stepLR|
-|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|stepLR|
+|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|0.9229|stepLR|
 
 <br>
 
