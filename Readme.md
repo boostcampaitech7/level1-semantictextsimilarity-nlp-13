@@ -29,14 +29,14 @@
 <a href="mailto:wltn80609@ajou.ac.kr" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:sunny020111@ajou.ac.kr" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:chris40461@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:beaver.zip@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:peter520416@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|
 
 ### 🧑🏻‍🔧 Members' Role
-> 김태원 캠퍼는 13조의 팀장을 맡아 팀을 이끌며, 데이터의 분포를 분석하고, 데이터 증강에 큰 기여를 했습니다. 정주현 캠퍼와 이한서 캠퍼는 주로 정규 표현식을 활용하여 데이터를 전처리하고, 조사(은, 는, 이, 가, 을, 를, 과, 와)를 랜덤화하는 기법으로 데이터 품질을 향상시켰고, 김성은 캠퍼와 권지수 캠퍼는 Hugging Face와 GitHub에 있는 다양한 모델을 탐색하며, 최적화 작업을 통해 성능을 극대화하는데 주력했습니다.
+> 김태원 캠퍼는 13조의 팀장을 맡아 팀을 이끌며, 데이터의 분포를 분석하고, 데이터 증강에 큰 기여를 했습니다. 정주현 캠퍼와 이한서 캠퍼는 주로 정규 표현식을 활용하여 데이터를 전처리하고, 조사(은<->는, 이<->가, 을<->를, 과<->와)를 랜덤화하게 교체하는 방법으로 데이터 품질을 향상시켰고, 김성은 캠퍼와 권지수 캠퍼는 Hugging Face와 GitHub에 있는 다양한 모델을 탐색하며, 최적화 작업을 통해 성능을 극대화하는데 주력했습니다.
 
 | 이름 | 역할 |
 | :---: | --- |
 | **`권지수`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (KLUE: 논문 바탕으로 RoBERTa와 ELECTRA 계열 모델 중심으로 탐색), **모델 실험** (team-lucid/deberta-v3-base-korean), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김성은`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (Encoder, Decoder, Encoder - Decoder 모델로 세분화하여 탐색), **모델 실험** (snunlp-KR-ELECTRA), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김태원`** | **모델 실험** (KR-ELECTRA-discriminator, electra-kor-base, deberta-v3, klue-roberta ), **데이터 증강** (label rescaling(0점 인덱스의 제거 및 5점 인덱스 추가), 단순 복제 데이터 증강(1점~3점 인덱스), train 데이터의 전체적인 맞춤법 교정/불용어 제거/띄어쓰기 교정), **모델 Ensemble** (weighted sum for 3model/4models) |
-| **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), Hyperparameter Tuning(Optuna Template 제작 및 실험)|
+| **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), **Hyperparameter Tuning**(Optuna Template 제작 및 실험)|
 | **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
 
 <br>
@@ -129,30 +129,30 @@
 ## 📐 Project Ground Rule
 >팀 협업을 위해 프로젝트 관련 Ground Rule을 설정하여 프로젝트가 원활하게 돌아갈 수 있도록 규칙을 정했으며, 날짜 단위로 간략한 목표를 설정하여 협업을 원활하게 진행할 수 있도록 계획하여 진행했습니다.
 
-**- a. `Server 관련`** : 권지수, 김성은, 이한서, 정주현 캠퍼는 각자 서버를 생성해 모델 실험을 진행하고, 팀장 김태원은 서버가 유휴 상태일 때 실험을 이어서 관리하며 진행한다.
+**- a. `Server 관련`** : 권지수, 김성은, 이한서, 정주현 캠퍼는 각자 서버를 생성해 모델 실험을 진행하고, 팀장 김태원 캠퍼는 서버가 유휴 상태일 때 실험을 이어서 관리하며 진행한다.
 
 **- b. `Git 관련`** : 각자 branch 생성해 작업하고, 공통으로 사용할 파일은 main에 push 하는 방법으로 협업을 진행한다.
 
 **- c. `Submission 관련`** : 대회 마감 2일 전까지는 자유롭게 제출하나, 2일 전부터는 인당 2회씩 분배한다.
 
-**- d. `Notion 관련`** : 원활한 아이디어 브레인스토밍과 분업을 위해 회의를 할 경우 노션에 기록하며, 연구 및 실험결과의 기록을 공유했다.
+**- d. `Notion 관련`** : 원활한 아이디어 브레인스토밍과 분업을 위해 연구 진행 사항 및 실험 결과를 기록하여 공유한다.
 
 <br>
 
-## 🗓 Project Procedure: 총 9일 진행
+## 🗓 Project Procedure: 총 13일 진행
 - **`(1~3 일차)`**: EDA 분석
 - **`(3~5 일차)`**: 데이터 전처리
 - **`(6~11 일차)`** : 데이터 증강
 - **`(7~12 일차)`** : 모델링 및 튜닝
 - **`(11~13 일차)`** : 앙상블
 
-*아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
+* 아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
 <img width="486" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
 
 <br>
 
 ### **📊DataSet**
-* 우리는 먼저 데이터의 양이 적고 불균형하다는 점을 확인했다. 이를 해결하기 위해 데이터의 양을 절대적으로 늘린 후, 증강된 데이터의 라벨 분포를 고려하여 추가적인 데이터 증강을 진행했다.
+* 우리는 먼저 데이터의 양이 적고 불균형하다는 점을 확인했다. 이를 해결하기 위해 데이터의 절대적인 양을 늘린 후, 증강된 데이터의 라벨 분포를 고려하여 추가적으로 데이터 증강을 수행했다.
 
 |**Techniques**|**Description**|
 |:--:|:--:|
@@ -187,7 +187,7 @@ pip install -r requirements.txt
 
 ### ⌨️ How To Train & Test
 ```bash
-#데이터 증강
+# 데이터 증강
 python3 augmentation.py
 # train.py 코드 실행 : 모델 학습을 순차적으로 진행
 # 이후 test.py 코드를 순차적으로 실행하여 test
