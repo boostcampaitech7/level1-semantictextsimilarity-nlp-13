@@ -201,7 +201,7 @@ python3 test.py
 python3 train.py
 python3 test.py
 
-#plm_name[2], lr[2] -> team-lucid/deberta-v3-base-korean 
+#plm_name[2], lr[2] -> team-lucid/deberta-v3-base-korean
 python3 train.py
 python3 test.py
 
@@ -209,7 +209,7 @@ python3 test.py
 python3 train.py
 python3 test.py
 
-#plm_name[4], lr[4] -> eenzeenee/t5-base-korean- summarization
+#plm_name[4], lr[4] -> eenzeenee/t5-base-korean-summarization
 python3 train.py
 python3 test.py
 
