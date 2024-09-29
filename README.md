@@ -1,8 +1,8 @@
 # Level 1 Project :: STS(Semantic Text Similarity)
 
 ### 📝 Abstract
-- 이 프로젝트는 네이버 부스트 캠프 AI-Tech 7기 NLP Level 1 기초 프로젝트 경진대회로, Dacon과 Kaggle과 유사한 대회형 방식으로 진행되었습니다.
-- 두 문장이 의미적으로 얼마나 유사한지를 수치화하는 N21 자연어처리 Task인 의미 유사도 판별(Semantic Text Similarity, STS)를 주제로, 모든 팀원이 데이터 전처리부터 앙상블까지 AI 모델링의 전 과정을 함께 협업했습니다.
+- 이 프로젝트는 네이버 부스트 캠프 AI-Tech 7기 NLP Level 1 기초 프로젝트 경진대회로, Dacon과 Kaggle과 유사한 대회형 방식으로 진행되었다.
+- 두 문장이 의미적으로 얼마나 유사한지를 수치화하는 N21 자연어처리 Task인 의미 유사도 판별(Semantic Text Similarity, STS)를 주제로, 모든 팀원이 데이터 전처리부터 앙상블까지 AI 모델링의 전 과정을 함께 협업했다.
 
 <br>
 
