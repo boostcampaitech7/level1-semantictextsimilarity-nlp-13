@@ -13,7 +13,8 @@
 - Private Leader Board 
 <img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
 
-- [📈 NLP 13조 Project Wrap-Up report 살펴보기](https://github.com/boostcampaitech5/level1_semantictextsimilarity-nlp-11/files/11331465/NLP.11.Wrap-Up._.pdf) <!-- 최종 만들어진 후 수정 -->
+- [📈 NLP 13조 Project Wrap-Up report 살펴보기]([https://github.com/user-attachments/files/17182231/NLP_13.Wrap-Up.pdf]
+)
 
 <br>
 
