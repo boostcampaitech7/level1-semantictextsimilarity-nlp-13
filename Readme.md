@@ -8,10 +8,10 @@
 
 ## Project Leader Board 
 - Public Leader Board
-<img width="1089" alt="public_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
+<img width="1000" alt="public_leader_board" src="https://github.com/user-attachments/assets/4d4592bc-1e3e-4455-8de9-cf61e5fc6d50">
 
 - Private Leader Board 
-<img width="1089" alt="private_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
+<img width="1000" alt="private_leader_board" src="https://github.com/user-attachments/assets/f1a5b53d-f30b-4d87-8a14-3cc1a602f8a0">
 
 - [📈 NLP 13조 Project Wrap-Up report 살펴보기](https://github.com/user-attachments/files/17182231/NLP_13.Wrap-Up.pdf
 )
