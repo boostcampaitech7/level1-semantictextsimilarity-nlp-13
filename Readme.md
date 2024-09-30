@@ -131,7 +131,7 @@
 - **`(11~13 일차)`** : 앙상블
 
 * 아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
-<img width="800" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
+<img width="800" alt="Gantt" src="https://github.com/user-attachments/assets/23c3dacb-95c7-49c0-88df-ebc5b5f9b1a7">
 
 <br>
 
