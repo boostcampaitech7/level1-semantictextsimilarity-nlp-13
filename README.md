@@ -157,7 +157,7 @@
 |**kykim/electra-kor-base**|1e-5|16|L2(MSE)|10|0.9259|stepLR|
 |**team-lucid/deberta-v3-base-korean**|1e-4|16|L2(MSE)|10|0.9327|stepLR|
 |**snunlp/KR-ELECTRA-discriminator**|1e-5|16|L2(MSE)|10|0.9333|stepLR|
-|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|stepLR|
+|**eenzeenee/t5-base-korean-summarization**|1e-5|16|L2(MSE)|10|0.9229|stepLR|
 
 <br>
 
