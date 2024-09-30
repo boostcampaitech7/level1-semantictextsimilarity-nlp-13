@@ -130,8 +130,8 @@
 - **`(7~12 일차)`** : 모델링 및 튜닝
 - **`(11~13 일차)`** : 앙상블
 
-*아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
-<img width="486" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
+* 아래는 저희 프로젝트 진행과정을 담은 Gantt차트 입니다. 
+<img width="800" alt="Gantt" src="https://github.com/user-attachments/assets/9f8bdf26-f22c-487d-8443-2faf60ccbe08">
 
 <br>
 
