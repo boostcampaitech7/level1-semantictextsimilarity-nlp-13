@@ -30,7 +30,7 @@
 <a href="mailto:wltn80609@ajou.ac.kr" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:sunny020111@ajou.ac.kr" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:chris40461@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:beaver.zip@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|<a href="mailto:peter520416@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style&logo=Gmail&logoColor=white"/></a>|
 
 ### 🧑🏻‍🔧 Members' Role
-> 김태원 캠퍼는 13조의 팀장을 맡아 팀을 이끌며, 데이터의 분포를 분석하고, 데이터 증강에 큰 기여를 했습니다. 정주현 캠퍼와 이한서 캠퍼는 주로 정규 표현식을 활용하여 데이터를 전처리하고, 조사(은, 는, 이, 가, 을, 를, 과, 와)를 랜덤화하는 기법으로 데이터 품질을 향상시켰고, 김성은 캠퍼와 권지수 캠퍼는 Hugging Face와 GitHub에 있는 다양한 모델을 탐색하며, 최적화 작업을 통해 성능을 극대화하는데 주력했습니다.
+> 김태원 캠퍼는 13조의 팀장을 맡아 팀을 이끌며, 데이터의 분포를 분석하고, 데이터 증강에 큰 기여를 했다. 정주현 캠퍼와 이한서 캠퍼는 주로 정규 표현식을 활용하여 데이터를 전처리하고, 조사(은, 는, 이, 가, 을, 를, 과, 와)를 랜덤화하는 기법으로 데이터 품질을 향상시켰다. 김성은 캠퍼와 권지수 캠퍼는 Hugging Face와 GitHub에 있는 다양한 모델을 탐색하며, 최적화 작업을 통해 성능을 극대화하는데 주력했다.
 
 | 이름 | 역할 |
 | :---: | --- |
@@ -38,7 +38,7 @@
 | **`김성은`** | **EDA** (라벨 분포 데이터분석), **모델 탐색** (Encoder, Decoder, Encoder - Decoder 모델로 세분화하여 탐색), **모델 실험** (snunlp-KR-ELECTRA), **Ensemble 실험** (output 평균 및 가중치 활용) |
 | **`김태원`** | **모델 실험** (KR-ELECTRA-discriminator, electra-kor-base, deberta-v3, klue-roberta ), **데이터 증강** (label rescaling(0점 인덱스의 제거 및 5점 인덱스 추가), 단순 복제 데이터 증강(1점~3점 인덱스), train 데이터의 전체적인 맞춤법 교정/불용어 제거/띄어쓰기 교정), **모델 Ensemble** (weighted sum for 3model/4models) |
 | **`이한서`** |**데이터 증강**(조사 대체, Label 분포 균형화), **모델 실험**(team-lucid/deberta-v3-base-korean, monologg/koelectra-base-v3-discriminator, snunlp/KR-ELECTRA), Hyperparameter Tuning(Optuna Template 제작 및 실험)|
-| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정** (T5-base-korean-summarization), **Ensemble**(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
+| **`정주현`** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **데이터 EDA** (Label 분포, 문장 내의 단어 빈도), **데이터 증강** (Swap sentence1 and sentence2, 유의어 교체(‘너무’, ‘진짜’, ‘정말’)), **모델 선정 및 Ensemble** (T5-base-korean-summarization), Ensemble(Blending Ensemble for 3 or 4 model(meta model = Ridge)) |
 
 <br>
 
@@ -47,9 +47,10 @@
 
 |**프로젝트 주제**| **`Semantic Text Similarity (STS)` :** 두 텍스트가 얼마나 유사한지 판단하는 NLP Task|
 | :---: | --- |
-|**프로젝트 구현내용**| 1. Hugging Face의 Pretrained 모델과 STS 데이터셋을 활용해 두 문장의 0과 5사이의 유사도를 측정하는 AI 모델을 구축 <br>2. 리더보드 평가지표인 피어슨 상관 계수(Pearson Correlation Coefficient, PCC)에서 높은 점수(1에 가까운 점수)에 도달할 수 있도록 데이터 전처리, 증강, 하이퍼파라미터 튜닝을 진행|
+|**프로젝트 구현내용**| 1. Hugging Face 의 Pretrained 모델과 STS 데이터셋을 활용해 두 문장의 0 과 5 사이의 유사도를 측정하는 AI 모델을 구축 <br>2. 리더보드 평가지표인 피어슨 상관 계수(Pearson Correlation Coefficient ,PCC)에서 높은 점수(1 
+에 가까운 점수)에 도달할 수 있도록 데이터 전처리, 증강, 하이퍼 파라미터 튜닝을 진행|
 |**개발 환경**|**• `GPU` :** Tesla V100 서버 4개 (RAM32G)<br> **• `개발 Tool` :** Jupyter notebook, VS Code [서버 SSH연결]
-|**협업 환경**|**• `Github Repository` :** Baseline 코드 공유 및 버전 관리, 개인 branch 를 사용하여 작업 <br>**• `Notion` :** STS 프로젝트 페이지를 통한 역할분담, 실험 가설 설정 및 결과 공유 <br>**• `SLACK, Zoom` :** 실시간 비대면 회의|
+|**협업 환경**|**• `Github Repository` :** Baseline 코드 공유 및 버전 관리, 개인 branch를 사용해 작업상황 공유 <br>**• `Notion` :** STS 프로젝트 페이지를 통한 역할분담, 실험 가설 설정 및 결과 공유 <br>**• `SLACK, Zoom` :** 실시간 대면/비대면 회의|
 
 <br>
 
@@ -113,11 +114,11 @@
 ## 📐 Project Ground Rule
 >팀 협업을 위해 프로젝트 관련 Ground Rule을 설정하여 프로젝트가 원활하게 돌아갈 수 있도록 규칙을 정했으며, 날짜 단위로 간략한 목표를 설정하여 협업을 원활하게 진행할 수 있도록 계획하여 진행했습니다.
 
-**- a. `Server 관련`** : 권지수, 김성은, 이한서, 정주현 캠퍼는 각자 서버를 생성해 모델 실험을 진행하고, 팀장 김태원은 서버가 유휴 상태일 때 실험을 이어서 관리하며 진행한다.
+**- a. `Server 관련`** : 권지수, 김성은, 이한서, 정주현 캠퍼는 각자 서버를 생성해 모델 실험을 진행하고, 김태원 캠퍼는 서버가 유휴 상태인 서버에서 실험을 진행했다.
 
-**- b. `Git 관련`** : 각자 branch 생성해 작업하고, 공통으로 사용할 파일은 main에 push 하는 방법으로 협업을 진행한다.
+**- b. `Git 관련`** : 각자 branch 생성해 작업하고, 공통으로 사용할 파일은 main에 push 하는 방법으로 협업했다.
 
-**- c. `Submission 관련`** : 대회 마감 2일 전까지는 자유롭게 제출하나, 2일 전부터는 인당 2회씩 분배한다.
+**- c. `Submission 관련`** : 대회 마감 2일 전까지는 자유롭게 제출했고, 2일 전부터는 인당 2회씩 분배했다.
 
 **- d. `Notion 관련`** : 원활한 아이디어 브레인스토밍과 분업을 위해 회의를 할 경우 노션에 기록하며, 연구 및 실험결과의 기록을 공유했다.
 
