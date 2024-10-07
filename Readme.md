@@ -72,39 +72,56 @@
 - **최종 제출 파일** : `/output/Ensemble/blending_ensemble.csv`
 
 ```
-📦level1_semantictextsimilarity-nlp-11
- ┣ .gitignore
- ┣ config_yaml
- ┃ ┣ kykim.yaml
- ┃ ┣ snunlp.yaml
- ┃ ┣ test.yaml
- ┃ ┗ xlm_roberta_large.yaml
- ┣ data
- ┃ ┣ train.csv
+📦level1_semantictextsimilarity-nlp-13
+ ┣ 📂 base
+ ┃ ┣ __init__.py
+ ┃ ┣ base_data_loader.py
+ ┃ ┣ base_dataset.py
+ ┃ ┗ base_trainer.py
+ ┣ 📂 data
  ┃ ┣ aug_train.csv
  ┃ ┣ dev.csv
- ┃ ┗ test.csv
- ┣ wordnet
- ┃ ┗ wordnet.pickle
- ┣ save_folde
- ┃ ┣ kykim
- ┃ ┃ ┗ checkpoint-7960
- ┃ ┣ snunlp
- ┃ ┃ ┗ checkpoint-31824
- ┃ ┗ xlm_roberta_large
- ┃   ┗ checkpoint-7960
- ┣ esnb
- ┃ ┗ esnb.csv
- ┣ output
- ┃ ┣ xlm_roberta_large.csv
- ┃ ┣ kykim.csv
- ┃ ┗ snunlp.csv
- ┣ .gitignore
- ┣ Readme.md
+ ┃ ┣ sample_submission.csv
+ ┃ ┣ test.csv
+ ┃ ┗ train.csv
+ ┣ 📂 module
+ ┃ ┣ dataset.py
+ ┃ ┣ loss.py
+ ┃ ┣ metric.py
+ ┃ ┣ model.py
+ ┃ ┗ trainer.py
+ ┣ 📂 output
+ ┃ ┣ 📂 Ensemble
+ ┃ ┃ ┗ blending_ensemble.csv
+ ┃ ┣ 📂 STSModel_eenzeenee-t5-base-korean-summarization
+ ┃ ┃ ┣ dev_output_t5.csv
+ ┃ ┃ ┣ test_output_t5.csv
+ ┃ ┃ ┗ train_output_t5.csv
+ ┃ ┣ 📂 STSModel_klue-roberta-base
+ ┃ ┃ ┣ dev_output_klue.csv
+ ┃ ┃ ┣ test_output_klue.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_kykim-electra-kor-base
+ ┃ ┃ ┣ dev_output_kykim.csv
+ ┃ ┃ ┣ test_output_kykim.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_snunlp-KR-ELECTRA-discriminator
+ ┃ ┃ ┣ dev_output_snunlp.csv
+ ┃ ┃ ┣ test_output_snunlp.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┣ 📂 STSModel_team-lucid-deberta-v3-base-korean
+ ┃ ┃ ┣ dev_output_lucid.csv
+ ┃ ┃ ┣ test_output_lucid.csv
+ ┃ ┃ ┗ train_output.csv
+ ┃ ┗ 📂 eng2_
+ ┃ ┃ ┣ dev_output_eng2.csv
+ ┃ ┃ ┗ test_output_eng2.csv
  ┣ augmentation.py
- ┣ dataloader.py
- ┣ esnb.py
- ┣ infer.py
+ ┣ blending_ensemble.py
+ ┣ config.yaml
+ ┣ Readme.md
+ ┣ requirements.txt
+ ┣ test.py
  ┣ train.py
  ┗ utils.py
  ```
