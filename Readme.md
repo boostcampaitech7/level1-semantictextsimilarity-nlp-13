@@ -164,9 +164,9 @@
 
 
 
-## 🤖**Ensemble Model**
+## 🤖**Ensemble**
 
-* 최종적으로 5개의 모델을 blending 기법을 활용하여 사용했했다.
+* 최종적으로 5개의 모델에 대해 Blending Ensemble을 수행했다.
 
 |**Model**|**Learing Rate**|**Batch Size**|**loss**|**epoch**|**dev person (val_pearson)**|**Scheduler**|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
